@@ -38,7 +38,7 @@
             "valor": 129.90,
             "promocao": false,
             "valorPromo": 0,
-            "imagem": "heaset.jpg"
+            "imagem": "headset_philips.jpg"
         },
         {
             "id": 6,
@@ -70,7 +70,7 @@
             "valor": 450.90,
             "promocao": false,
             "valorPromo": 0,
-            "imagem": "go_pro_8.jpg"
+            "imagem": "gopro_8.jpg"
         }
     ]
 }

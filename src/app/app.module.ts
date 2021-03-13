@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './navigation/menu/menu.component';
@@ -9,7 +10,8 @@ import { FooterComponent } from './navigation/footer/footer.component';
 import { ContactComponent } from './institutional/contact/contact.component';
 import { AboutComponent } from './institutional/sobre/about.component';
 import { rootRouterConfig } from './app.routes';
-
+import { ProductService } from './products/product.service';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,17 @@ import { rootRouterConfig } from './app.routes';
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     [RouterModule.forRoot(rootRouterConfig)]
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
