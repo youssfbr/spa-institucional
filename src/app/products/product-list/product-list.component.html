@@ -10,9 +10,9 @@
                     </div>
                 </a>
                 <div class="card-body">
-                    <h4 class="card-title">{{ product.nome }}</h4>
+                    <h4 class="card-title">{{ product.nome | titlecase }}</h4>
                     <p>Por apenas:</p>
-                    <div><h4>{{ product.valor }}</h4></div>
+                    <div><h4>{{ product.valor | currency:'BRL':symbol:'1.2-2':'pt' }}</h4></div>
                 </div>
                 <div class="card-footer">
                     <a class="btn btn-primary" [routerLink]="['/carrinho', product.id]">
