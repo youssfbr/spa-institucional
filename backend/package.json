@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "start": "json-server --no-cors --watch products.json",
-    "build": "ng build"
+    "build": "npm run build"
   },
   "dependencies": {
     "json-server": "^0.16.3"
   }
 }
-  
