@@ -1,11 +1,20 @@
 {
   "name": "spa-institucional-api",
-  "version": "0.0.0",
+  "author": "Alisson Youssf",
+  "description": "Backend fake para front-web spa-institucional-ang",
+  "email": "youssfbr@gmail.com",
+  "license": "ISC",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "json-server --no-cors --watch products.json",
-    "build": "npm run build"
+    "start": "node server.js"
   },
+  "keywords": [
+    "json-server,heroku, node, REST API"
+  ],
   "dependencies": {
+    "cors": "^2.8.5",
     "json-server": "^0.16.3"
   }
 }
