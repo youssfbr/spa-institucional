@@ -1,0 +1,45 @@
+<div class="container main-container">
+
+    <div class="row text-center">
+
+        <div *ngFor="let product of products" class="col-md-4" style="padding-bottom: 30px;">
+            <div class="card h-100">
+                <a class="text-decoration-none" [routerLink]="['/produto-detalhe', product.id]">
+                    <div style="align-content: center;">
+                        <img src="/assets/{{ product.imagem }}" height="164px" width="164px" alt="{{ product.imagem }}" />
+                    </div>
+                </a>
+                <h4 class="card-title">{{ product.nome | titlecase }}</h4>
+
+                <div [ngSwitch]="product.promocao">
+                    <p *ngSwitchCase="true">Promoção!</p>
+                    <p *ngSwitchCase="false"><br />Por apenas:</p>                    
+                </div>
+
+                <div *ngIf="product.promocao" class="card-body">                    
+                    <div>
+                        <h4 class="card-text" >
+                            <div style="color: #a1a1a1;">
+                                De:
+                                <small><del>{{ product.valor | currency:'BRL':symbol:'1.2-2':'pt' }}</del></small><br />
+                            </div>                        
+                            <div style="color: red;">
+                                Por:  {{ product.valorPromo | currency:'BRL':symbol:'1.2-2':'pt' }} 
+                            </div>                            
+                        </h4>
+                    </div>
+                </div>
+                
+                <div *ngIf="!product.promocao" class="card-body">                    
+                    <div><h4>{{ product.valor | currency:'BRL':symbol:'1.2-2':'pt' }}</h4></div>
+                </div>
+                
+                <div class="card-footer">
+                    <a class="btn btn-primary" [routerLink]="['/carrinho', product.id]">
+                        <span class="fa fa-shopping-cart"></span> Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "name": "spa-institucional-api",
+  "version": "0.0.0",
+  "scripts": {    
+    "start": "json-server --watch products.json",
+    "build": "ng build"
+  },
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}
